@@ -1,0 +1,17 @@
+{
+  "name": "cloudcenmax/maxpanel-whmcs-partner",
+  "description": "MaxPanel partner license fulfillment for WHMCS",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.2",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "illuminate/database": "^6.20 || ^8.83 || ^10.48 || ^12.0"
+  },
+  "scripts": {
+    "test": "php tests/fulfillment.php"
+  }
+}
