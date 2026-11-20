@@ -1,5 +1,7 @@
 # MaxPanel Partner Licenses for WHMCS
 
+[![Module checks](https://github.com/cloudcenmax/maxpanel-whmcs-partner/actions/workflows/ci.yml/badge.svg)](https://github.com/cloudcenmax/maxpanel-whmcs-partner/actions/workflows/ci.yml)
+
 Sell a MaxPanel license with a VPS or dedicated server as a configurable option or a WHMCS product add-on. WHMCS charges your customer. MaxPanel invoices you after the month closes and charges the card you saved in the Partner Portal.
 
 ## Release status
@@ -63,6 +65,8 @@ For servers with a shared outbound IP, add `"activation":"key"` to the mapping. 
 MaxPanel prorates consumption in UTC, applies the partner discount and monthly minimum, and issues one invoice after month-end. The credit limit covers outstanding invoices and the current month's committed spend when granting new licenses. Suspended individual WHMCS services keep their reserved license until cancellation. When an automatic charge is declined or needs authentication, pay the invoice from the Partner Portal. Overdue postpaid invoices suspend license access until paid.
 
 ## Compatibility verification
+
+The configurable-option and product add-on test suite passed on PHP 7.2, 7.3, 7.4, 8.1, 8.2, 8.3 and 8.4 in GitHub Actions. These checks exercise the standalone integration with simulated WHMCS data.
 
 The module uses PHP 7.2 syntax and WHMCS's documented `InvoicePaid`, `AfterCronJob`, and client product details hooks. Test both sales routes on licensed self-hosted staging copies of WHMCS 8.0, 8.2, 8.13, 9.0 and the latest 9.x release. Use versions of PHP and ionCube supported by each installation.
 
